@@ -105,7 +105,7 @@ export default function Home() {
             <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <button 
                 onClick={() => setIsQuizOpen(true)}
-                className="bg-[#6B8E7B] text-white px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:bg-[#5A7A68] transition-all duration-300 w-full sm:w-auto"
+                className="bg-[#325B4A] text-white px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:bg-[#5A7A68] transition-all duration-300 w-full sm:w-auto"
               >
                 Start Home Assessment
               </button>
@@ -161,9 +161,20 @@ export default function Home() {
             Built for Those Who Know.
           </h2>
           
-          <p className="text-lg md:text-xl text-[#3A4A45] font-medium leading-relaxed max-w-2xl mx-auto">
-            We are not just a wellness brand; we are a movement for those who live by intention. For those who honor where they come from, carry pride in their roots, and live according to values they refuse to compromise.
-          </p>
+          <div className="text-lg md:text-xl text-[#3A4A45] font-medium leading-relaxed max-w-3xl mx-auto space-y-6">
+            <p>
+              In a world filled with scientific research, expert opinions, and personal experiences, knowing what to trust and making the right choice for you and your family isn't always easy.
+            </p>
+            <p>
+              That's why we bring together research, educational articles, videos, and other relevant resources, to help you understand the product, explore the evidence, and consider your options from an informed perspective.
+            </p>
+            <p>
+              Our role is not to make the decision for you, but to give you the information you need to make it with greater clarity, confidence, and peace of mind.
+            </p>
+            <div className="py-4 border-y border-[#6B8E7B]/20 my-8 italic text-[#6B8E7B]">
+              "This isn't for everyone. It's more for people serious about upgrading daily wellness habits long term."
+            </div>
+          </div>
           
           <p className="text-2xl md:text-3xl font-serif text-[#5C7C8A] italic pt-4">
             Live by It.
@@ -177,46 +188,46 @@ export default function Home() {
       <section className="py-32 bg-white relative">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-[#1C2826] mb-6 tracking-tight">The Wellness Home Foundations</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-[#073348] mb-6 tracking-tight">The Wellness Home Foundations</h2>
             <p className="text-lg text-[#3A4A45] font-medium leading-relaxed">A considered approach to your daily environment, built on three essential pillars.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Pillar 1 */}
-            <motion.div {...fadeUp} className="bg-[#F9F7F3] rounded-[2rem] p-8 hover:shadow-xl transition-shadow border border-[#EAE5DB] group">
+            <motion.a href="#kangen" {...fadeUp} className="block bg-[#F9F7F3] rounded-[2rem] p-8 hover:shadow-xl transition-shadow border border-[#EAE5DB] group cursor-pointer">
               <div className="w-16 h-16 rounded-full bg-[#6B8E7B]/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B8E7B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
               </div>
               <h3 className="text-2xl font-bold text-[#1C2826] mb-4">Drinking Water</h3>
               <p className="text-[#3A4A45] mb-8 leading-relaxed">Pure, structured hydration engineered to support your body's natural vitality.</p>
               <div className="text-xs font-bold text-[#6B8E7B] uppercase tracking-widest">Kangen Water</div>
-            </motion.div>
+            </motion.a>
 
             {/* Pillar 2 */}
-            <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="bg-[#F9F7F3] rounded-[2rem] p-8 hover:shadow-xl transition-shadow border border-[#EAE5DB] group">
+            <motion.a href="#anespa" {...fadeUp} transition={{ delay: 0.1 }} className="block bg-[#F9F7F3] rounded-[2rem] p-8 hover:shadow-xl transition-shadow border border-[#EAE5DB] group cursor-pointer">
               <div className="w-16 h-16 rounded-full bg-[#5C7C8A]/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C7C8A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
               </div>
               <h3 className="text-2xl font-bold text-[#1C2826] mb-4">Shower & Spa</h3>
               <p className="text-[#3A4A45] mb-8 leading-relaxed">Mineral-rich, purified water that respects your skin and transforms daily routines.</p>
               <div className="text-xs font-bold text-[#5C7C8A] uppercase tracking-widest">Anespa</div>
-            </motion.div>
+            </motion.a>
 
             {/* Pillar 3 */}
-            <motion.div {...fadeUp} transition={{ delay: 0.2 }} className="bg-[#F9F7F3] rounded-[2rem] p-8 hover:shadow-xl transition-shadow border border-[#EAE5DB] group">
+            <motion.a href="#emguarde" {...fadeUp} transition={{ delay: 0.2 }} className="block bg-[#F9F7F3] rounded-[2rem] p-8 hover:shadow-xl transition-shadow border border-[#EAE5DB] group cursor-pointer">
               <div className="w-16 h-16 rounded-full bg-[#8A7B6B]/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A7B6B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
               </div>
               <h3 className="text-2xl font-bold text-[#1C2826] mb-4">Home Environment</h3>
               <p className="text-[#3A4A45] mb-8 leading-relaxed">Active harmonization for your connected lifestyle, balancing the modern digital home.</p>
               <div className="text-xs font-bold text-[#8A7B6B] uppercase tracking-widest">emGuarde</div>
-            </motion.div>
+            </motion.a>
           </div>
         </div>
       </section>
 
       {/* Kangen Product Section */}
-      <section id="products" className="py-32 bg-white relative">
+      <section id="kangen" className="py-32 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 relative">
           <motion.div 
             {...fadeUp}
@@ -225,14 +236,34 @@ export default function Home() {
             {/* Text Side (Scrolling) */}
             <div className="order-2 md:order-1 space-y-16 py-12 md:py-32">
               <div className="space-y-6">
-                <div className="text-sm font-bold tracking-widest text-[#6B8E7B] uppercase">Structured Hydration</div>
+                <div className="text-sm font-bold tracking-widest text-[#073348] uppercase">Structured Hydration</div>
                 <h2 className="text-5xl font-black tracking-tight text-[#1C2826]">
                   Kangen Water <br />
-                  <span className="text-[#6B8E7B]">Redefined.</span>
+                  <span className="text-[#073348]">Redefined.</span>
                 </h2>
-                <p className="text-xl text-gray-600 leading-relaxed font-medium">
-                  A masterpiece of Japanese engineering. Produce antioxidant-rich, alkaline water directly from your tap. Designed for optimal cellular absorption, mental clarity, and lasting energy.
-                </p>
+                <div className="space-y-4">
+                  <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                    Before technology, there was nature. Our ancestors drank from rivers and springs, stored water in mineral-rich clay vessels, and lived in constant relationship with the natural elements.
+                  </p>
+                  <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                    Modern life has taken us further and further away from that environment. Kangen Water® represents a bridge between the wisdom of nature and the technology of today.
+                  </p>
+                  <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                    Because we are not separate from nature. We are biological, electrical and water-based beings, and water is at the centre of life.
+                  </p>
+                  
+                  {/* Tip Box */}
+                  <div className="mt-8 p-6 bg-[#073348]/5 rounded-2xl border border-[#073348]/10 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-[#073348]"></div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#073348" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                      <h4 className="font-bold text-[#073348]">Start reconnecting with the way our ancestors experienced water</h4>
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      Keep your drinking water in a natural, unglazed clay vessel overnight. Traditionally, clay vessels were used to store and naturally cool water. Keep it covered and in a clean, cool place, then enjoy it the following day. Or simply add a fresh slice of lemon to your water. Wellness begins with awareness.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* Styled features to match emGuarde */}
@@ -242,9 +273,9 @@ export default function Home() {
                   { title: "Active Hydrogen & Antioxidants", desc: "Our bodies constantly fight oxidative stress. Kangen machines infuse your drinking water with active hydrogen, turning it into a powerful liquid antioxidant that fights aging and fatigue at a cellular level." },
                   { title: "Customizable pH Levels", desc: "More than just drinking water. Select the exact pH level you need at the touch of a button - from highly alkaline water for deep cleaning to mildly acidic 'beauty water' for your daily skincare routine." }
                 ].map((feature, i) => (
-                  <div key={i} className="flex gap-5 p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100 hover:bg-white hover:shadow-xl hover:border-[#6B8E7B]/40 transition-all duration-300 group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#6B8E7B]/10 rounded-full flex items-center justify-center group-hover:bg-[#6B8E7B] transition-colors shadow-sm">
-                       <span className="text-[#6B8E7B] group-hover:text-white font-bold">0{i+1}</span>
+                  <div key={i} className="flex gap-5 p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100 hover:bg-white hover:shadow-xl hover:border-[#073348]/40 transition-all duration-300 group">
+                    <div className="flex-shrink-0 w-12 h-12 bg-[#073348]/10 rounded-full flex items-center justify-center group-hover:bg-[#073348] transition-colors shadow-sm">
+                       <span className="text-[#073348] group-hover:text-white font-bold">0{i+1}</span>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-[#1C2826] mb-2">{feature.title}</h3>
@@ -256,7 +287,7 @@ export default function Home() {
             </div>
             
             {/* Image Side (Sticky) */}
-            <div className="order-1 md:order-2 sticky top-32 relative rounded-[3rem] overflow-hidden shadow-2xl h-[600px] bg-white flex items-center justify-center p-8 border border-gray-100">
+            <div className="order-1 md:order-2 md:sticky md:top-32 relative rounded-[3rem] overflow-hidden shadow-2xl h-[400px] md:h-[600px] bg-white flex items-center justify-center p-4 md:p-8 border border-gray-100 z-10">
               <Image 
                 src="/assets/extracted/kangen_3_1.jpeg" 
                 alt="Kangen pH Scale" 
@@ -269,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* emGuarde Section - Light Split-Screen Sticky */}
-      <section className="py-32 bg-gray-50 text-[#1C2826] border-t border-gray-200">
+      <section id="emguarde" className="py-32 bg-gray-50 text-[#1C2826] border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             {...fadeUp}
@@ -277,7 +308,7 @@ export default function Home() {
           >
             
             {/* Image Side (Sticky) */}
-            <div className="sticky top-32 relative w-full h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-gray-200 border border-gray-100">
+            <div className="md:sticky md:top-32 relative w-full h-[400px] md:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-gray-200 border border-gray-100 z-10">
               <Image 
                 src="/assets/extracted/ppt/media/image60.png" 
                 alt="emGuarde EMF Protection Workspace" 
@@ -289,10 +320,10 @@ export default function Home() {
             {/* Content Side (Scrolling) */}
             <div className="space-y-12 py-12 md:py-32">
               <div>
-                <div className="text-sm font-bold tracking-widest text-[#6B8E7B] uppercase mb-4">Space Harmonization</div>
+                <div className="text-sm font-bold tracking-widest text-[#3D6C6A] uppercase mb-4">Space Harmonization</div>
                 <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-6 text-[#1C2826] leading-[1.1]">
                   Invisible Protection.<br />
-                  <span className="text-[#6B8E7B]">emGuarde EMF.</span>
+                  <span className="text-[#3D6C6A]">emGuarde EMF.</span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed font-medium">
                   In a world surrounded by digital noise, create a sanctuary of calm. Advanced harmonizing technology that protects your space and restores your natural frequency.
@@ -306,9 +337,9 @@ export default function Home() {
                   { title: "Protect", desc: "Creates an active 8-meter protective radius for your workspace, living room, or bedroom." },
                   { title: "Plug & Play", desc: "No complex installation required. Simply plug it in and experience the immediate shift in your space's energy." }
                 ].map((feature, i) => (
-                  <div key={i} className="flex gap-5 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-[#6B8E7B] transition-all group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#6B8E7B]/10 rounded-full flex items-center justify-center group-hover:bg-[#6B8E7B] transition-colors">
-                       <span className="text-[#6B8E7B] group-hover:text-white font-bold">0{i+1}</span>
+                  <div key={i} className="flex gap-5 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-[#3D6C6A] transition-all group">
+                    <div className="flex-shrink-0 w-12 h-12 bg-[#3D6C6A]/10 rounded-full flex items-center justify-center group-hover:bg-[#3D6C6A] transition-colors">
+                       <span className="text-[#3D6C6A] group-hover:text-white font-bold">0{i+1}</span>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-[#1C2826] mb-2">{feature.title}</h3>
@@ -323,12 +354,66 @@ export default function Home() {
         </div>
       </section>
 
+      
+      {/* Anespa Section - Light Blue */}
+      <section id="anespa" className="py-32 bg-white text-[#1C2826]">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            {...fadeUp}
+            className="grid lg:grid-cols-2 gap-16 items-start"
+          >
+            {/* Content Side */}
+            <div className="space-y-12 py-12 md:py-32">
+              <div>
+                <div className="text-sm font-bold tracking-widest text-[#568695] uppercase mb-4">Therapeutic Spa</div>
+                <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-6 text-[#1C2826] leading-[1.1]">
+                  Bring The Spring <br />
+                  <span className="text-[#568695]">Back Home.</span>
+                </h2>
+                
+                <div className="space-y-4">
+                  <p className="text-xl text-gray-600 leading-relaxed font-medium italic">
+                    "Before there were shower systems, there were natural springs."
+                  </p>
+                  <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                    For thousands of years, people sought out mineral-rich springs and thermal waters to bathe, relax and care for their skin. Today, we shower every day in treated water that has travelled through pipes before reaching our homes.
+                  </p>
+                  <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                    Its Japanese mineral-ion water system combines purification with a specially developed ceramic cartridge containing natural mineral materials, including materials sourced from the Futamata hot spring in Hokkaido, Japan. The result is water that is not simply filtered, but conditioned with minerals and designed to create a more natural, spa-like bathing experience.
+                  </p>
+                  
+                  {/* Tip Box */}
+                  <div className="mt-8 p-6 bg-[#568695]/5 rounded-2xl border border-[#568695]/10 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-[#568695]"></div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#568695" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                      <h4 className="font-bold text-[#568695]">CARE FOR THE BARRIER</h4>
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      Try making your shower a little gentler. Use comfortably warm rather than very hot water, keep long hot showers to a minimum, and avoid aggressively scrubbing the skin. After showering, gently pat the skin dry and apply a simple natural moisturizer while it is still slightly damp. Don't just clean your skin. Protect the environment your skin is designed to live in.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Side */}
+            <div className="md:sticky md:top-32 relative w-full h-[400px] md:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-gray-200 border border-gray-100 z-10 bg-gray-50 flex items-center justify-center">
+              <div className="text-[#568695]/50 text-center p-8">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-4 opacity-50"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <p className="font-bold uppercase tracking-widest text-sm">Anespa Image/Video <br/> Coming Soon</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* The Science & FAQ Section */}
       {/* Science & Reality Section */}
       <section id="science" className="py-32 bg-[#F9F7F3] border-t border-[#EAE5DB]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <div className="text-sm font-bold tracking-widest text-[#6B8E7B] uppercase mb-4">Clarity & Truth</div>
+            <div className="text-sm font-bold tracking-widest text-[#3D6C6A] uppercase mb-4">Clarity & Truth</div>
             <h2 className="text-4xl md:text-5xl font-black text-[#1C2826] mb-6">Explore the Science.</h2>
             <p className="text-lg text-[#3A4A45] font-medium max-w-2xl mx-auto">
               Our role is not to make the decision for you, but to give you the information you need to make it with greater clarity, confidence, and peace of mind.
@@ -348,8 +433,8 @@ export default function Home() {
                 </p>
               </div>
               <div className="space-y-3 pt-4 border-t border-gray-100">
-                <a href="https://www.unep.org/interactives/beat-plastic-pollution/" target="_blank" rel="noopener noreferrer" className="block text-sm font-bold text-[#5C7C8A] hover:text-[#6B8E7B] transition-colors">→ UNEP: Plastic Pollution Overview</a>
-                <a href="https://www.niehs.nih.gov/health/topics/agents/microplastics" target="_blank" rel="noopener noreferrer" className="block text-sm font-bold text-[#5C7C8A] hover:text-[#6B8E7B] transition-colors">→ NIEHS: Microplastics & Health</a>
+                <a href="https://www.unep.org/interactives/beat-plastic-pollution/" target="_blank" rel="noopener noreferrer" className="block text-sm font-bold text-[#5C7C8A] hover:text-[#3D6C6A] transition-colors">→ UNEP: Plastic Pollution Overview</a>
+                <a href="https://www.niehs.nih.gov/health/topics/agents/microplastics" target="_blank" rel="noopener noreferrer" className="block text-sm font-bold text-[#5C7C8A] hover:text-[#3D6C6A] transition-colors">→ NIEHS: Microplastics & Health</a>
               </div>
             </div>
 
@@ -362,7 +447,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="space-y-3 pt-4 border-t border-gray-100">
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5666661/" target="_blank" rel="noopener noreferrer" className="block text-sm font-bold text-[#5C7C8A] hover:text-[#6B8E7B] transition-colors">→ NCBI: Hydrogen Water Systematic Review</a>
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5666661/" target="_blank" rel="noopener noreferrer" className="block text-sm font-bold text-[#5C7C8A] hover:text-[#3D6C6A] transition-colors">→ NCBI: Hydrogen Water Systematic Review</a>
               </div>
             </div>
 
@@ -375,7 +460,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="space-y-3 pt-4 border-t border-gray-100">
-                <a href="#" className="block text-sm font-bold text-[#5C7C8A] hover:text-[#6B8E7B] transition-colors">→ Explore what science says about EMF</a>
+                <a href="#" className="block text-sm font-bold text-[#5C7C8A] hover:text-[#3D6C6A] transition-colors">→ Explore what science says about EMF</a>
               </div>
             </div>
           </div>
@@ -387,7 +472,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 text-center">
           <motion.div {...fadeUp} className="mb-12">
             <h2 className="text-4xl md:text-5xl font-black text-[#1C2826] tracking-tight">
-              Experience The <span className="text-[#6B8E7B]">Standard.</span>
+              Experience The <span className="text-[#3D6C6A]">Standard.</span>
             </h2>
             <p className="mt-4 text-gray-600 font-medium text-lg">Watch the Origins of Now film.</p>
           </motion.div>
@@ -409,7 +494,7 @@ export default function Home() {
             
             {/* Play Button */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center shadow-[0_0_40px_rgba(0,0,0,0.2)] group-hover:scale-110 group-hover:bg-[#6B8E7B] group-hover:border-[#6B8E7B] transition-all duration-300">
+              <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center shadow-[0_0_40px_rgba(0,0,0,0.2)] group-hover:scale-110 group-hover:bg-[#3D6C6A] group-hover:border-[#3D6C6A] transition-all duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="white" className="ml-2 group-hover:text-white transition-colors"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
               </div>
             </div>
@@ -426,7 +511,7 @@ export default function Home() {
           className="relative z-10 max-w-5xl w-full"
         >
           <div className="relative bg-white/90 backdrop-blur-3xl rounded-[2.5rem] p-12 md:p-24 text-center overflow-hidden border border-white shadow-[0_30px_60px_rgba(0,0,0,0.15)]">
-            <div className="w-20 h-20 bg-gradient-to-br from-[#6B8E7B] to-[#5A7A68] rounded-full flex items-center justify-center mx-auto mb-10 shadow-2xl">
+            <div className="w-20 h-20 bg-gradient-to-br from-[#3D6C6A] to-[#5A7A68] rounded-full flex items-center justify-center mx-auto mb-10 shadow-2xl">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </div>
             
@@ -434,7 +519,7 @@ export default function Home() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
               For those who live by their values, not by trends. Join our growing community of intentional living on Instagram.
             </p>
-            <a href="https://www.instagram.com/originsofnow" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-[#1C2826] text-white px-10 py-5 rounded-full font-bold hover:bg-[#6B8E7B] transition-all shadow-2xl hover:-translate-y-1 text-lg">
+            <a href="https://www.instagram.com/originsofnow" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-[#1C2826] text-white px-10 py-5 rounded-full font-bold hover:bg-[#3D6C6A] transition-all shadow-2xl hover:-translate-y-1 text-lg">
               Follow @originsofnow 
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
@@ -452,14 +537,14 @@ export default function Home() {
                 For those who honor where they come from, carry pride in their roots, and live according to values they refuse to compromise. Live by it.
               </p>
               <div className="flex space-x-4">
-                <a href="https://www.instagram.com/originsofnow" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#6B8E7B] hover:border-[#6B8E7B] transition-all cursor-pointer group">
+                <a href="https://www.instagram.com/originsofnow" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#3D6C6A] hover:border-[#3D6C6A] transition-all cursor-pointer group">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:scale-110 transition-transform">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
                 </a>
-                <a href="#" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#6B8E7B] hover:border-[#6B8E7B] transition-all cursor-pointer group">
+                <a href="#" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#3D6C6A] hover:border-[#3D6C6A] transition-all cursor-pointer group">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:scale-110 transition-transform">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect x="2" y="9" width="4" height="12"></rect>
@@ -472,9 +557,9 @@ export default function Home() {
             <div>
               <h4 className="text-xl font-bold mb-6 text-white">Explore</h4>
               <ul className="space-y-4 text-gray-400 font-medium">
-                <li><a href="#products" className="hover:text-[#6B8E7B] transition-colors">Foundations</a></li>
-                <li><a href="#science" className="hover:text-[#6B8E7B] transition-colors">The Science</a></li>
-                <li><button onClick={() => setIsQuizOpen(true)} className="hover:text-[#6B8E7B] transition-colors">Home Assessment</button></li>
+                <li><a href="#products" className="hover:text-[#3D6C6A] transition-colors">Foundations</a></li>
+                <li><a href="#science" className="hover:text-[#3D6C6A] transition-colors">The Science</a></li>
+                <li><button onClick={() => setIsQuizOpen(true)} className="hover:text-[#3D6C6A] transition-colors">Home Assessment</button></li>
               </ul>
             </div>
 
@@ -482,8 +567,8 @@ export default function Home() {
               <h4 className="text-xl font-bold mb-6 text-white">Join The OON Club</h4>
               <p className="text-gray-400 text-sm mb-4">Subscribe for exclusive insights on intelligent living.</p>
               <form className="flex" onSubmit={(e) => e.preventDefault()}>
-                <input type="email" placeholder="Email address" className="bg-white/5 border border-white/10 rounded-l-xl px-4 py-3 w-full text-white focus:outline-none focus:border-[#6B8E7B] placeholder-gray-500" />
-                <button className="bg-[#6B8E7B] text-white px-6 py-3 rounded-r-xl font-bold hover:bg-[#5A7A68] transition-colors">→</button>
+                <input type="email" placeholder="Email address" className="bg-white/5 border border-white/10 rounded-l-xl px-4 py-3 w-full text-white focus:outline-none focus:border-[#3D6C6A] placeholder-gray-500" />
+                <button className="bg-[#3D6C6A] text-white px-6 py-3 rounded-r-xl font-bold hover:bg-[#5A7A68] transition-colors">→</button>
               </form>
             </div>
           </div>
@@ -512,17 +597,17 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C2826] to-transparent"></div>
               </div>
               <div className="relative z-10">
-                <h3 className="text-3xl font-serif text-[#6B8E7B] mb-4">Origins of Now</h3>
+                <h3 className="text-3xl font-serif text-[#3D6C6A] mb-4">Origins of Now</h3>
                 <p className="text-white/80 font-medium">Elevating daily wellness.</p>
               </div>
               
               <div className="relative z-10 space-y-8">
                 {quizStep < 6 && (
                   <>
-                    <p className="font-bold tracking-widest text-[#6B8E7B] uppercase text-sm">Progress</p>
+                    <p className="font-bold tracking-widest text-[#3D6C6A] uppercase text-sm">Progress</p>
                     <div className="flex gap-2">
                       {[1, 2, 3, 4, 5].map(step => (
-                        <div key={step} className={`h-1.5 w-10 rounded-full transition-colors ${quizStep >= step ? 'bg-[#6B8E7B]' : 'bg-white/20'}`}></div>
+                        <div key={step} className={`h-1.5 w-10 rounded-full transition-colors ${quizStep >= step ? 'bg-[#3D6C6A]' : 'bg-white/20'}`}></div>
                       ))}
                     </div>
                   </>
@@ -539,11 +624,11 @@ export default function Home() {
               <div className="flex-1 flex flex-col justify-center max-w-lg w-full mx-auto">
                 {quizStep === 1 && (
                   <div className="space-y-6 animate-in slide-in-from-right-4">
-                    <span className="text-[#6B8E7B] font-bold tracking-widest uppercase text-sm">01 — Your Water</span>
+                    <span className="text-[#3D6C6A] font-bold tracking-widest uppercase text-sm">01 — Your Water</span>
                     <h2 className="text-2xl md:text-3xl font-black text-[#1C2826]">What does your household mainly drink?</h2>
                     <div className="grid grid-cols-1 gap-3">
                       {['Bottled water', 'Filtered water', 'Tap water', 'Mineral water', 'A combination'].map(opt => (
-                        <button key={opt} onClick={() => { setAnswers({...answers, waterDrink: opt}); setQuizStep(2); }} className={`w-full text-left p-4 rounded-xl border-2 transition-all font-medium shadow-sm ${answers.waterDrink === opt ? 'border-[#6B8E7B] bg-[#6B8E7B]/5 text-[#1C2826]' : 'border-[#EAE5DB] hover:border-[#6B8E7B]/50 hover:bg-white text-[#3A4A45]'}`}>
+                        <button key={opt} onClick={() => { setAnswers({...answers, waterDrink: opt}); setQuizStep(2); }} className={`w-full text-left p-4 rounded-xl border-2 transition-all font-medium shadow-sm ${answers.waterDrink === opt ? 'border-[#3D6C6A] bg-[#3D6C6A]/5 text-[#1C2826]' : 'border-[#EAE5DB] hover:border-[#3D6C6A]/50 hover:bg-white text-[#3A4A45]'}`}>
                           {opt}
                         </button>
                       ))}
@@ -554,11 +639,11 @@ export default function Home() {
                 {quizStep === 2 && (
                   <div className="space-y-6 animate-in slide-in-from-right-4">
                     <button onClick={() => setQuizStep(1)} className="text-sm text-gray-400 hover:text-[#1C2826] font-medium flex items-center gap-1 mb-2">← Back</button>
-                    <span className="text-[#6B8E7B] font-bold tracking-widest uppercase text-sm">01 — Your Water</span>
+                    <span className="text-[#3D6C6A] font-bold tracking-widest uppercase text-sm">01 — Your Water</span>
                     <h2 className="text-2xl md:text-3xl font-black text-[#1C2826]">How do you mainly get your drinking water?</h2>
                     <div className="grid grid-cols-1 gap-3">
                       {['Individual bottles', 'Large bottles (1-1.5 L)', 'Dispenser gallons', 'Filtered / tap', 'A combination'].map(opt => (
-                        <button key={opt} onClick={() => { setAnswers({...answers, waterSource: opt}); setQuizStep(3); }} className={`w-full text-left p-4 rounded-xl border-2 transition-all font-medium shadow-sm ${answers.waterSource === opt ? 'border-[#6B8E7B] bg-[#6B8E7B]/5 text-[#1C2826]' : 'border-[#EAE5DB] hover:border-[#6B8E7B]/50 hover:bg-white text-[#3A4A45]'}`}>
+                        <button key={opt} onClick={() => { setAnswers({...answers, waterSource: opt}); setQuizStep(3); }} className={`w-full text-left p-4 rounded-xl border-2 transition-all font-medium shadow-sm ${answers.waterSource === opt ? 'border-[#3D6C6A] bg-[#3D6C6A]/5 text-[#1C2826]' : 'border-[#EAE5DB] hover:border-[#3D6C6A]/50 hover:bg-white text-[#3A4A45]'}`}>
                           {opt}
                         </button>
                       ))}
@@ -569,12 +654,12 @@ export default function Home() {
                 {quizStep === 3 && (
                   <div className="space-y-6 animate-in slide-in-from-right-4">
                     <button onClick={() => setQuizStep(2)} className="text-sm text-gray-400 hover:text-[#1C2826] font-medium flex items-center gap-1 mb-2">← Back</button>
-                    <span className="text-[#6B8E7B] font-bold tracking-widest uppercase text-sm">02 — Your Digital Environment</span>
+                    <span className="text-[#3D6C6A] font-bold tracking-widest uppercase text-sm">02 — Your Digital Environment</span>
                     <h2 className="text-2xl md:text-3xl font-black text-[#1C2826]">How connected is your home?</h2>
                     <p className="text-[#3A4A45]">Approximately how many Wi-Fi connected devices are regularly operating?</p>
                     <div className="grid grid-cols-2 gap-3">
                       {['1-5', '6-15', '16-30', '30+'].map(opt => (
-                        <button key={opt} onClick={() => { setAnswers({...answers, devices: opt}); setQuizStep(4); }} className={`w-full text-left p-4 rounded-xl border-2 transition-all font-medium shadow-sm ${answers.devices === opt ? 'border-[#6B8E7B] bg-[#6B8E7B]/5 text-[#1C2826]' : 'border-[#EAE5DB] hover:border-[#6B8E7B]/50 hover:bg-white text-[#3A4A45]'}`}>
+                        <button key={opt} onClick={() => { setAnswers({...answers, devices: opt}); setQuizStep(4); }} className={`w-full text-left p-4 rounded-xl border-2 transition-all font-medium shadow-sm ${answers.devices === opt ? 'border-[#3D6C6A] bg-[#3D6C6A]/5 text-[#1C2826]' : 'border-[#EAE5DB] hover:border-[#3D6C6A]/50 hover:bg-white text-[#3A4A45]'}`}>
                           {opt}
                         </button>
                       ))}
@@ -585,22 +670,22 @@ export default function Home() {
                 {quizStep === 4 && (
                   <div className="space-y-6 animate-in slide-in-from-right-4">
                     <button onClick={() => setQuizStep(3)} className="text-sm text-gray-400 hover:text-[#1C2826] font-medium flex items-center gap-1 mb-2">← Back</button>
-                    <span className="text-[#6B8E7B] font-bold tracking-widest uppercase text-sm">03 — Your Home & Family</span>
+                    <span className="text-[#3D6C6A] font-bold tracking-widest uppercase text-sm">03 — Your Home & Family</span>
                     <h2 className="text-2xl md:text-3xl font-black text-[#1C2826]">Which areas matter most to you right now?</h2>
                     <div className="grid grid-cols-1 gap-3">
                       {['Better hydration', 'Reducing bottled-water use', 'Reducing unnecessary plastic', 'Mindful technology use', 'Overall wellness & lifestyle'].map(opt => (
-                        <label key={opt} className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-all font-medium shadow-sm ${answers.priorities.includes(opt) ? 'border-[#6B8E7B] bg-[#6B8E7B]/5 text-[#1C2826]' : 'border-[#EAE5DB] hover:border-[#6B8E7B]/50 hover:bg-white text-[#3A4A45]'}`}>
+                        <label key={opt} className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-all font-medium shadow-sm ${answers.priorities.includes(opt) ? 'border-[#3D6C6A] bg-[#3D6C6A]/5 text-[#1C2826]' : 'border-[#EAE5DB] hover:border-[#3D6C6A]/50 hover:bg-white text-[#3A4A45]'}`}>
                           <input type="checkbox" checked={answers.priorities.includes(opt)} onChange={(e) => {
                             const newPriorities = e.target.checked 
                               ? [...answers.priorities, opt] 
                               : answers.priorities.filter(p => p !== opt);
                             setAnswers({...answers, priorities: newPriorities});
-                          }} className="w-5 h-5 accent-[#6B8E7B]" />
+                          }} className="w-5 h-5 accent-[#3D6C6A]" />
                           {opt}
                         </label>
                       ))}
                     </div>
-                    <button onClick={() => setQuizStep(5)} disabled={answers.priorities.length === 0} className="w-full mt-4 bg-[#1C2826] text-white font-bold py-4 rounded-xl hover:bg-[#6B8E7B] transition-colors shadow-lg disabled:opacity-50">
+                    <button onClick={() => setQuizStep(5)} disabled={answers.priorities.length === 0} className="w-full mt-4 bg-[#1C2826] text-white font-bold py-4 rounded-xl hover:bg-[#3D6C6A] transition-colors shadow-lg disabled:opacity-50">
                       Continue →
                     </button>
                   </div>
@@ -609,13 +694,13 @@ export default function Home() {
                 {quizStep === 5 && (
                   <div className="space-y-6 animate-in slide-in-from-right-4">
                     <button onClick={() => setQuizStep(4)} className="text-sm text-gray-400 hover:text-[#1C2826] font-medium flex items-center gap-1 mb-2">← Back</button>
-                    <span className="text-[#6B8E7B] font-bold tracking-widest uppercase text-sm">04 — Final Step</span>
+                    <span className="text-[#3D6C6A] font-bold tracking-widest uppercase text-sm">04 — Final Step</span>
                     <h2 className="text-2xl md:text-3xl font-black text-[#1C2826]">Where should we send your profile?</h2>
                     <p className="text-[#3A4A45]">Enter your details below to reveal your personalized Home Environment Profile.</p>
                     <form onSubmit={(e) => { e.preventDefault(); setQuizStep(6); }} className="space-y-4 mt-6">
-                      <input required type="text" value={answers.name} onChange={e => setAnswers({...answers, name: e.target.value})} className="w-full p-4 rounded-xl border-2 border-[#EAE5DB] focus:border-[#6B8E7B] focus:outline-none bg-white font-medium text-[#1C2826]" placeholder="Your Name" />
-                      <input required type="email" value={answers.email} onChange={e => setAnswers({...answers, email: e.target.value})} className="w-full p-4 rounded-xl border-2 border-[#EAE5DB] focus:border-[#6B8E7B] focus:outline-none bg-white font-medium text-[#1C2826]" placeholder="Your Email Address" />
-                      <button type="submit" className="w-full bg-[#1C2826] text-white font-bold py-4 rounded-xl hover:bg-[#6B8E7B] transition-colors shadow-lg mt-4">
+                      <input required type="text" value={answers.name} onChange={e => setAnswers({...answers, name: e.target.value})} className="w-full p-4 rounded-xl border-2 border-[#EAE5DB] focus:border-[#3D6C6A] focus:outline-none bg-white font-medium text-[#1C2826]" placeholder="Your Name" />
+                      <input required type="email" value={answers.email} onChange={e => setAnswers({...answers, email: e.target.value})} className="w-full p-4 rounded-xl border-2 border-[#EAE5DB] focus:border-[#3D6C6A] focus:outline-none bg-white font-medium text-[#1C2826]" placeholder="Your Email Address" />
+                      <button type="submit" className="w-full bg-[#1C2826] text-white font-bold py-4 rounded-xl hover:bg-[#3D6C6A] transition-colors shadow-lg mt-4">
                         Reveal My Profile →
                       </button>
                     </form>
@@ -646,15 +731,15 @@ export default function Home() {
                         <p className="text-[#3A4A45]">Your home has {answers.devices} connected devices running regularly, creating a consistent digital environment.</p>
                       </div>
 
-                      <div className="p-6 bg-[#6B8E7B]/10 rounded-2xl border border-[#6B8E7B]/20">
+                      <div className="p-6 bg-[#3D6C6A]/10 rounded-2xl border border-[#3D6C6A]/20">
                         <h4 className="font-bold text-[#1C2826] uppercase tracking-widest text-sm mb-2">Your Priorities</h4>
                         <p className="text-[#3A4A45] font-medium">{answers.priorities.join(', ')}</p>
                       </div>
                     </div>
                     
-                    <p className="text-center font-serif text-[#6B8E7B] text-xl italic pt-4">"Interesting what we discover when we look at everyday things differently."</p>
+                    <p className="text-center font-serif text-[#3D6C6A] text-xl italic pt-4">"Interesting what we discover when we look at everyday things differently."</p>
 
-                    <button onClick={closeQuiz} className="w-full bg-[#1C2826] text-white font-bold py-4 rounded-xl hover:bg-[#6B8E7B] transition-colors shadow-lg">
+                    <button onClick={closeQuiz} className="w-full bg-[#1C2826] text-white font-bold py-4 rounded-xl hover:bg-[#3D6C6A] transition-colors shadow-lg">
                       Close Profile
                     </button>
                   </div>
@@ -677,9 +762,9 @@ export default function Home() {
               className="mb-6 w-[340px] bg-white/95 backdrop-blur-xl border border-gray-100 shadow-[0_30px_60px_rgba(0,0,0,0.15)] rounded-[2rem] overflow-hidden"
             >
               <div className="bg-[#1C2826] p-6 text-white text-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#6B8E7B] blur-[50px] opacity-20 rounded-full"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#3D6C6A] blur-[50px] opacity-20 rounded-full"></div>
                 <h4 className="text-xl font-black mb-1 relative z-10">OON Concierge</h4>
-                <p className="text-sm text-[#6B8E7B] font-medium relative z-10">Elevate your living.</p>
+                <p className="text-sm text-[#3D6C6A] font-medium relative z-10">Elevate your living.</p>
               </div>
               <div className="p-6 space-y-5">
                 <p className="text-gray-600 text-sm leading-relaxed text-center font-medium">
@@ -701,7 +786,7 @@ export default function Home() {
 
         <button 
           onClick={() => setIsConciergeOpen(!isConciergeOpen)}
-          className="w-16 h-16 bg-gradient-to-br from-[#1C2826] to-[#273832] rounded-full flex items-center justify-center text-[#6B8E7B] shadow-[0_10px_40px_rgba(212,175,55,0.4)] border border-[#6B8E7B]/30 hover:scale-110 transition-transform relative z-10 group"
+          className="w-16 h-16 bg-gradient-to-br from-[#1C2826] to-[#273832] rounded-full flex items-center justify-center text-[#3D6C6A] shadow-[0_10px_40px_rgba(212,175,55,0.4)] border border-[#3D6C6A]/30 hover:scale-110 transition-transform relative z-10 group"
         >
           {isConciergeOpen ? (
              <span className="text-3xl font-light text-white leading-none">&times;</span>

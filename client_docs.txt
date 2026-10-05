@@ -1,0 +1,108 @@
+--- WEB CONTENT 1 ---
+Content for the website:
+STATEMENTS
+Some statements I would like to have on the website – there are more that I will share or add here as I continue working on the content. 
+[ General ] In a world filled with scientific research, expert opinions, and personal experiences, knowing what to trust and making the right choice for you and your family isn’t always easy.
+That’s why we bring together research, educational articles, videos, and other relevant resources, to help you understand the product, explore the evidence, and consider your options from an informed perspective.
+Our role is not to make the decision for you, but to give you the information you need to make it with greater clarity, confidence, and peace of mind.
+[ Water ] People spend thousands trying to fix health while using average water daily.
+[ General ] This isn’t for everyone. It’s more for people serious about upgrading daily wellness habits long term.
+REALITY CHECK
+This is just an example something of what I like to include on the website – I would need this to be visually designed to capture attention at a glance. (let’s discuss it separately to see if you can make it)  
+ 
+QUIZ (about water/Digital environment at home)
+The following I worked on with ChatGPT (needs refinement) however I put here for your reference to understand what is coming and how to develop the links to generated result of quiz taken. 
+Quiz Sample 1
+The purpose isn't to collect lots of information; it's to create a few moments where the person thinks, “Actually, I never considered that.”
+HOW HEALTHY IS YOUR HOME ENVIRONMENT?
+The things we rarely think about can shape our everyday environment.
+Take our 90-second Home Environment Assessment and discover the areas you may want to look at more closely.
+[ START MY ASSESSMENT → ]
+01 — YOUR WATER 💧
+What does your household mainly drink?
+○ Bottled water○ Filtered water○ Tap water○ Mineral water○ A combination
+How do you mainly get your drinking water?
+○ Individual bottles○ Large bottles (1–1.5 L)○ Dispenser gallons ○ A combination○ Filtered / tap
+Approximately how much does your household use?
+If bottles:___ bottles per week
+If gallons / jugs:___ gallons per week
+And how many people are drinking this water?
+___ people
+YOUR WATER REALITY CHECK
+We'll estimate your annual water consumption + spending and show you what that means in bottles and plastic.
+[ SHOW MY WATER PROFILE → ]
+02 — YOUR DIGITAL ENVIRONMENT 📱
+How connected is your home?
+Approximately how many Wi-Fi-connected devices are regularly operating?
+○ 1–5○ 6–15○ 16–30○ 30+
+Where is your main Wi-Fi router?
+○ Near bedrooms○ Living room○ Home office○ Children's room○ Other
+Is your home also your workplace?
+○ Yes○ No○ Sometimes
+03 — YOUR HOME & FAMILY 🏠
+Who shares your home?
+☐ Children☐ Adults☐ Pets☐ Just me
+Which areas matter most to you right now?
+Choose up to 2.
+☐ Better hydration☐ Reducing bottled-water use☐ Reducing unnecessary plastic☐ Being more mindful of the technology around us☐ Overall wellness & lifestyle
+YOUR HOME ENVIRONMENT PROFILE
+Your assessment is ready.
+We've looked at three everyday areas:
+💧 WATERWhat you're drinking and how much you're consuming.
+📱 DIGITALHow connected your home has become.
+🏠 LIFESTYLEWho lives in your home and what matters most to you.
+Now let's turn those answers into something useful.
+[ REVEAL MY PROFILE → ]
+YOUR PERSONAL REALITY CHECK
+Rather than simply giving you a score, we'll highlight:
+1. What you're already doing well
+2. What may be worth looking at
+3. One or two simple changes that could make the biggest difference to your home environment
+Because a healthier home isn't about changing everything.
+It's about becoming more aware of the things we normally overlook.
+One change I would strongly recommend
+I would not give them a generic “62/100 Home Wellness Score.” It feels like a marketing gimmick and implies that there is an objective scientific measurement behind the score.
+Instead, make the result feel personal and slightly intriguing:
+Your Home Environment Profile is ready.You have 2 areas worth looking at more closely.
+Then reveal something like:
+💧 WATER — HIGH IMPACT AREA“You consume approximately 1,947 single-use bottles per year.”
+📱 DIGITAL — AWARENESS AREA“Your home has 16–30 connected devices, with your router located near a bedroom.”
+🏠 YOUR PRIORITY — WELLNESS“You identified hydration and your overall home environment as your priorities.”
+And then:
+“Interesting what we discover when we look at the everyday things differently.”
+That line fits the Origins philosophy much better than a conventional wellness score.
+One other change: I would make the water calculation the first “reward” in the quiz. Once someone sees their ownannual water cost and bottle consumption, the rest of the assessment suddenly has context. Then the digital environment section feels like part of a broader “How considered is your home environment?” assessment rather than an obvious lead-in to EmGuard.
+LINKS – 
+Plastics
+WHERE DOES ALL THAT PLASTIC GO?
+A bottle may be used for minutes. But the material doesn't simply disappear when we throw it away.
+Globally, plastic waste is landfilled, incinerated, recycled or mismanaged. UNEP reports that 22% of plastic waste is mismanaged and becomes litter, while plastic packaging represents a major source of single-use plastic waste.
+Plastic pollution can enter land, rivers and oceans, affecting ecosystems and wildlife. UNEP estimates that millions of tonnes of plastic enter aquatic environments each year.
+AND WHAT ABOUT US?
+As larger pieces of plastic break down, they can form microplastics and nanoplastics.
+Researchers have reported micro- and nanoplastics in human biological samples including blood, lungs and placenta. But an important question remains: What does this mean for long-term human health?
+Scientists are still working to answer that.
+WHO describes microplastic exposure as an emerging area of concern and highlights significant gaps in our understanding of potential health effects, particularly for the smallest particles.
+ Read what the science says:
+NIEHS — What we know about microplastics and nanoplastics — useful overview of research finding these particles in human tissues and the remaining uncertainty about health effects. 
+UNEP — Everything you need to know about plastic pollution — excellent source for the environmental/waste side of the story. 
+UNEP — Riverine plastic pollution — specifically useful for showing how mismanaged plastic reaches rivers and aquatic environments. 
+2.Molecular hydrogen / hydrogen-rich water
+Hydrogen Water: Extra Healthy or a Hoax? — Systematic Review
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5666661/
+3.EMF & our increasingly connected homes
+How much digital exposure surrounds you every day?
+Explore what science says about EMF →
+Links to be provided 
+
+=================================
+
+--- WEB DESIGN REVIEW 1 ---
+Web Design review 1
+Avoid the black color and even the yellow color doesn’t not represent the brand – Please use the posts as a reference for colors. Earthy colors and blue/green.
+I like the strip running through the site with the highlights 
+Not sure of the term “Our Tech” (will replace it with something else)
+First page to be about wellness (no products showing yet) I like it to be an attractive visual to welcome everyone in  - and maybe add the main text on the 2nd slide (Ground in Origin…. Iive by it)
+I also like to see a page that has maybe 3 prominent products parallel (Kangen water /Anespa/emGuard) as these 3 are the essence to a wellness home. However a subtle presentation of the products or non at all. One pillar showing drinking water/ the 2nd showing shower/ and their environment. 
+Then get into  each one separately as you designed. 
+2/Oct/26
