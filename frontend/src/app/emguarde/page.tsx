@@ -199,6 +199,35 @@ export default function EmGuardePage() {
           </div>
         </div>
 
+        {/* Research & Standards Section */}
+        <div className="space-y-6 mb-20">
+          {/* UTAR University Clinical Research Card */}
+          <div className="bg-white/10 border border-white/20 rounded-[2.5rem] p-8 md:p-10 backdrop-blur-md shadow-2xl relative overflow-hidden group hover:border-[#C9B79E]/50 transition-all duration-300">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 relative z-10">
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C9B79E]/20 text-[#C9B79E] text-xs font-bold uppercase tracking-wider mb-4 border border-[#C9B79E]/30">
+                  <span>Independent University Trials</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">
+                  Universiti Tunku Abdul Rahman (UTAR) Research & Standards
+                </h3>
+                <p className="text-white/80 text-base md:text-lg leading-relaxed font-normal">
+                  Review independent university-led testing, physiological microcirculation observations, and international regulatory compliance (FCC, CE, RoHS) documenting the efficacy of emGuarde technology.
+                </p>
+              </div>
+
+              <a 
+                href="https://emguarde.com/research-standards/#utar" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-3 bg-[#C9B79E] text-[#073348] px-8 py-4 rounded-full font-bold text-base shadow-xl hover:bg-white hover:scale-105 transition-all duration-300 whitespace-nowrap self-start lg:self-auto cursor-pointer"
+              >
+                <span>View UTAR Research Standards</span>
+                <span className="text-lg">↗</span>
+              </a>
+            </div>
+          </div>
+
         {/* Link to Science Page - Neutral Color, Minimized text, No title, 'The Science ->' button */}
         <div className="bg-[#F4F1EA] rounded-[2.5rem] p-8 md:p-10 shadow-2xl border border-[#EAE5DB] text-[#073348]">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -212,6 +241,7 @@ export default function EmGuardePage() {
               The Science &rarr;
             </Link>
           </div>
+        </div>
         </div>
 
       </div>

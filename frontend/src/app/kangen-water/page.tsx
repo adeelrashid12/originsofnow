@@ -313,13 +313,12 @@ export default function KangenWaterPage() {
                   <h4 className="text-xl font-bold text-white">What Doctors Say</h4>
                 </div>
                 <div className="w-full aspect-video bg-black relative">
-                  <iframe
-                    src="https://www.youtube-nocookie.com/embed/7Kiv2v5_S2c"
-                    title="What Doctors Say on Kangen Water"
-                    className="w-full h-full border-0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
+                  <video
+                    src="/assets/videos/kangen/doctors.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -331,13 +330,12 @@ export default function KangenWaterPage() {
                   <h4 className="text-xl font-bold text-white">Athletes on Hydration</h4>
                 </div>
                 <div className="w-full aspect-video bg-black relative">
-                  <iframe
-                    src="https://www.youtube-nocookie.com/embed/2kyLTQ8Vz4E"
-                    title="Athletes on Kangen Water"
-                    className="w-full h-full border-0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
+                  <video
+                    src="/assets/videos/kangen/athletes.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -349,13 +347,12 @@ export default function KangenWaterPage() {
                   <h4 className="text-xl font-bold text-white">Alkalise Body Explained</h4>
                 </div>
                 <div className="w-full aspect-video bg-black relative">
-                  <iframe
-                    src="https://www.youtube-nocookie.com/embed/EV1wt8r-MKI"
-                    title="Alkalise Body Explained"
-                    className="w-full h-full border-0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
+                  <video
+                    src="/assets/videos/kangen/alkalise.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -367,13 +364,12 @@ export default function KangenWaterPage() {
                   <h4 className="text-xl font-bold text-white">Factory: How It’s Made & Quality</h4>
                 </div>
                 <div className="w-full aspect-video bg-black relative">
-                  <iframe
-                    src="https://www.youtube-nocookie.com/embed/YEpS-YZ-gUg"
-                    title="Factory / How It's Made / Quality"
-                    className="w-full h-full border-0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
+                  <video
+                    src="/assets/videos/kangen/factory.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
