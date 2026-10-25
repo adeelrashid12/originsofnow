@@ -314,12 +314,14 @@ export default function KangenWaterPage() {
                 </div>
                 <div className="w-full aspect-video bg-black relative">
                   <video
-                    src="/assets/videos/kangen/doctors.mp4"
                     controls
                     playsInline
                     preload="metadata"
                     className="w-full h-full object-cover"
-                  />
+                  >
+                    <source src="/assets/videos/kangen/doctors.mp4" type="video/mp4" />
+                    <source src="https://raw.githubusercontent.com/adeelrashid12/originsofnow/main/frontend/public/assets/videos/kangen/doctors.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
 
@@ -331,12 +333,14 @@ export default function KangenWaterPage() {
                 </div>
                 <div className="w-full aspect-video bg-black relative">
                   <video
-                    src="/assets/videos/kangen/athletes.mp4"
                     controls
                     playsInline
                     preload="metadata"
                     className="w-full h-full object-cover"
-                  />
+                  >
+                    <source src="/assets/videos/kangen/athletes.mp4" type="video/mp4" />
+                    <source src="https://raw.githubusercontent.com/adeelrashid12/originsofnow/main/frontend/public/assets/videos/kangen/athletes.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
 
@@ -348,12 +352,14 @@ export default function KangenWaterPage() {
                 </div>
                 <div className="w-full aspect-video bg-black relative">
                   <video
-                    src="/assets/videos/kangen/alkalise.mp4"
                     controls
                     playsInline
                     preload="metadata"
                     className="w-full h-full object-cover"
-                  />
+                  >
+                    <source src="/assets/videos/kangen/alkalise.mp4" type="video/mp4" />
+                    <source src="https://raw.githubusercontent.com/adeelrashid12/originsofnow/main/frontend/public/assets/videos/kangen/alkalise.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
 
@@ -365,12 +371,14 @@ export default function KangenWaterPage() {
                 </div>
                 <div className="w-full aspect-video bg-black relative">
                   <video
-                    src="/assets/videos/kangen/factory.mp4"
                     controls
                     playsInline
                     preload="metadata"
                     className="w-full h-full object-cover"
-                  />
+                  >
+                    <source src="/assets/videos/kangen/factory.mp4" type="video/mp4" />
+                    <source src="https://raw.githubusercontent.com/adeelrashid12/originsofnow/main/frontend/public/assets/videos/kangen/factory.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
             </div>
