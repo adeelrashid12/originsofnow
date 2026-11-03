@@ -107,6 +107,40 @@ export default function SciencePage() {
         </motion.div>
       </section>
 
+      {/* Official Clinical Research & Standards (UTAR / emGuarde) */}
+      <section className="relative z-10 max-w-5xl mx-auto px-6 mb-16">
+        <motion.div {...fadeUp} className="bg-white rounded-[3rem] p-8 md:p-14 shadow-xl border border-gray-100">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div className="max-w-2xl">
+              <span className="inline-block px-3.5 py-1 rounded-full bg-[#3D6C6A]/10 text-[#3D6C6A] text-xs font-bold uppercase tracking-wider mb-4 border border-[#3D6C6A]/20">
+                Official University Clinical Trials & Standards
+              </span>
+              <h3 className="text-3xl md:text-4xl font-black text-[#073348] mb-4 tracking-tight">
+                Universiti Tunku Abdul Rahman (UTAR) Research & Standards
+              </h3>
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed font-normal mb-4">
+                Review independent university-led testing, physiological microcirculation observations, and international regulatory compliance (FCC, CE, RoHS) documenting the efficacy and biological safety of emGuarde technology.
+              </p>
+              <div className="flex flex-wrap items-center gap-3 text-xs font-semibold text-[#826443]">
+                <span className="bg-[#F4F1EA] px-3 py-1.5 rounded-full border border-[#EAE5DB]">✓ 36–40 MHz Targeted Harmonization</span>
+                <span className="bg-[#F4F1EA] px-3 py-1.5 rounded-full border border-[#EAE5DB]">✓ Cellular Blood Microcirculation</span>
+                <span className="bg-[#F4F1EA] px-3 py-1.5 rounded-full border border-[#EAE5DB]">✓ Global FCC & CE Certified</span>
+              </div>
+            </div>
+
+            <a 
+              href="https://emguarde.com/research-standards/#utar" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center gap-3 bg-[#073348] text-white px-8 py-4 rounded-full font-bold text-sm shadow-xl hover:bg-[#3D6C6A] hover:scale-105 transition-all duration-300 whitespace-nowrap self-start lg:self-auto cursor-pointer"
+            >
+              <span>View Official UTAR Research Standards</span>
+              <span className="text-lg">↗</span>
+            </a>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Further Reading & Perspectives (Books Section) */}
       <section className="relative z-10 max-w-5xl mx-auto px-6 mb-20">
         <motion.div {...fadeUp} className="bg-white rounded-[3rem] p-8 md:p-14 shadow-xl border border-gray-100">
