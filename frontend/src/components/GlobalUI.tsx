@@ -4,6 +4,60 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const waterFacts = [
+  {
+    tag: "Microplastics",
+    stat: "~240,000 Particles / L",
+    fact: "Columbia University research shows bottled water contains ~240,000 nanoplastic fragments per liter that penetrate cellular barriers.",
+    solution: "Ionized in-home filtration eliminates plastic exposure and delivers pure cellular hydration."
+  },
+  {
+    tag: "Cellular Hydration",
+    stat: "Micro-Clustered H₂",
+    fact: "Stored bottled water loses antioxidant vitality and turns acidic over time, slowing cellular absorption.",
+    solution: "Electrolyzed hydrogen-rich water hydrates 3x faster with potent alkaline buffering."
+  },
+  {
+    tag: "Antioxidant Potential",
+    stat: "Negative ORP Charge",
+    fact: "Standard tap and bottled water carry positive oxidation (+ORP), promoting free-radical oxidative stress.",
+    solution: "Active molecular hydrogen delivers high negative ORP, actively protecting cellular DNA."
+  },
+  {
+    tag: "Plastic Footprint",
+    stat: "1,500+ Bottles / Year",
+    fact: "The average household discards over 1,500 single-use bottles annually, creating persistent microplastic leaching.",
+    solution: "A single medical-grade ionizer replaces thousands of bottles with infinite pure living water."
+  }
+];
+
+const emfFacts = [
+  {
+    tag: "Ambient Radiation",
+    stat: "2.4 & 5 GHz Domestic Wi-Fi",
+    fact: "Overlapping Wi-Fi and smart devices create continuous high-frequency noise that disrupts deep sleep cycles.",
+    solution: "Targeted frequency harmonization calms your living space while keeping all devices connected."
+  },
+  {
+    tag: "Microcirculation",
+    stat: "Red Blood Cell Vitality",
+    fact: "Studies observe that constant high EMF exposure can cause red blood cell clumping (rouleaux), lowering tissue oxygenation.",
+    solution: "Harmonization suppresses wave interference, helping restore healthy, fluid blood circulation."
+  },
+  {
+    tag: "University Standards",
+    stat: "36.6% Wave Suppression",
+    fact: "UTAR University clinical testing confirms emGuarde suppresses 36–40 MHz ambient interference by 36.6%.",
+    solution: "Enjoy modern smart tech with proven, lab-tested biological space protection."
+  },
+  {
+    tag: "Restorative Sleep",
+    stat: "Melatonin & Rest Balance",
+    fact: "Electromagnetic radiation stresses the pineal gland, reducing nighttime recovery and cellular repair.",
+    solution: "Creating a harmonized sanctuary restores deeper sleep and morning vitality."
+  }
+];
+
 export default function GlobalUI() {
   const [isQuizOpen, setIsQuizOpen] = useState(false);
   const [isConciergeOpen, setIsConciergeOpen] = useState(false);
@@ -18,6 +72,24 @@ export default function GlobalUI() {
     homeWho: [] as string[], priorities: [] as string[],
     name: '', email: '' 
   });
+
+  const [factIndex, setFactIndex] = useState({ water: 0, emf: 0 });
+
+  const nextFacts = () => {
+    setFactIndex(prev => ({
+      water: (prev.water + 1) % waterFacts.length,
+      emf: (prev.emf + 1) % emfFacts.length
+    }));
+  };
+
+  const handleRevealProfile = (e: React.FormEvent) => {
+    e.preventDefault();
+    setFactIndex({
+      water: Math.floor(Math.random() * waterFacts.length),
+      emf: Math.floor(Math.random() * emfFacts.length)
+    });
+    setQuizStep(6);
+  };
 
   
   
@@ -275,7 +347,7 @@ export default function GlobalUI() {
                     <span className="text-[#3D6C6A] font-bold tracking-widest uppercase text-sm">04 — Final Step</span>
                     <h2 className="text-2xl md:text-3xl font-black text-[#1C2826]">Where should we send your profile?</h2>
                     <p className="text-[#3A4A45]">Enter your details below to reveal your personalized Home Environment Profile.</p>
-                    <form onSubmit={(e) => { e.preventDefault(); setQuizStep(6); }} className="space-y-4 mt-6">
+                    <form onSubmit={handleRevealProfile} className="space-y-4 mt-6">
                       <input required type="text" value={answers.name} onChange={e => setAnswers({...answers, name: e.target.value})} className="w-full p-4 rounded-xl border-2 border-[#EAE5DB] focus:border-[#3D6C6A] focus:outline-none bg-white font-medium text-[#1C2826]" placeholder="Your Name" />
                       <input required type="email" value={answers.email} onChange={e => setAnswers({...answers, email: e.target.value})} className="w-full p-4 rounded-xl border-2 border-[#EAE5DB] focus:border-[#3D6C6A] focus:outline-none bg-white font-medium text-[#1C2826]" placeholder="Your Email Address" />
                       <button type="submit" className="w-full bg-[#1C2826] text-white font-bold py-4 rounded-xl hover:bg-[#3D6C6A] transition-colors shadow-lg mt-4">
@@ -286,40 +358,117 @@ export default function GlobalUI() {
                 )}
 
                 {quizStep === 6 && (
-                  <div className="space-y-8 animate-in slide-in-from-bottom-8">
-                    <div className="text-center mb-8">
-                      <h2 className="text-3xl font-black text-[#1C2826]">Your Home Environment Profile is ready.</h2>
-                      <p className="text-[#3A4A45] mt-2">You have areas worth looking at more closely.</p>
+                  <div className="space-y-6 animate-in slide-in-from-bottom-8">
+                    <div className="text-center mb-6">
+                      <span className="text-xs font-bold uppercase tracking-widest text-[#3D6C6A] block mb-1">Personalized Analysis</span>
+                      <h2 className="text-2xl md:text-3xl font-black text-[#1C2826]">Your Home Environment Profile</h2>
+                      <p className="text-sm text-[#3A4A45] mt-1">Science-backed insights based on your household habits.</p>
                     </div>
 
-                    <div className="space-y-6">
-                      <div className="p-6 bg-white rounded-2xl border border-[#EAE5DB] shadow-sm">
-                        <div className="flex items-center gap-3 mb-2">
-                            <span className="text-2xl">💧</span>
-                            <h4 className="font-bold text-[#1C2826] uppercase tracking-widest text-sm">WATER — HIGH IMPACT AREA</h4>
+                    <div className="space-y-4">
+                      {/* Water Fact Card */}
+                      <div className="p-5 md:p-6 bg-white rounded-2xl border border-[#EAE5DB] shadow-sm hover:border-[#3D6C6A]/40 transition-all">
+                        <div className="flex items-center justify-between gap-2 mb-2">
+                          <div className="flex items-center gap-2">
+                            <span className="text-xl">💧</span>
+                            <span className="text-[11px] font-bold text-[#3D6C6A] uppercase tracking-wider">
+                              Water &bull; {waterFacts[factIndex.water].tag}
+                            </span>
                           </div>
-                        <p className="text-[#3A4A45]">You consume mainly {answers.waterDrink.toLowerCase()} via {answers.waterSource.toLowerCase()}. Did you know the average household consumes over 1,500 single-use bottles per year?</p>
+                          <span className="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-[#3D6C6A]/10 text-[#3D6C6A]">
+                            {waterFacts[factIndex.water].stat}
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-400 font-medium mb-2">
+                          Your habit: Mainly {answers.waterDrink ? answers.waterDrink.toLowerCase() : 'bottled water'} via {answers.waterSource ? answers.waterSource.toLowerCase() : 'bottles'}.
+                        </p>
+                        <p className="text-sm text-[#1C2826] font-semibold leading-relaxed mb-2">
+                          {waterFacts[factIndex.water].fact}
+                        </p>
+                        <div className="bg-[#F4F1EA] p-3 rounded-xl border border-[#EAE5DB] mb-3">
+                          <p className="text-xs text-[#3D6C6A] font-bold leading-relaxed">
+                            ✓ Uplifting Takeaway: {waterFacts[factIndex.water].solution}
+                          </p>
+                        </div>
+                        <Link 
+                          href="/science" 
+                          onClick={closeQuiz} 
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#073348] hover:text-[#3D6C6A] transition-colors"
+                        >
+                          <span>Learn more on The Science page</span>
+                          <span>&rarr;</span>
+                        </Link>
                       </div>
 
-                      <div className="p-6 bg-white rounded-2xl border border-[#EAE5DB] shadow-sm">
-                        <div className="flex items-center gap-3 mb-2">
-                            <span className="text-2xl">📱</span>
-                            <h4 className="font-bold text-[#1C2826] uppercase tracking-widest text-sm">DIGITAL — AWARENESS AREA</h4>
+                      {/* EMF Fact Card */}
+                      <div className="p-5 md:p-6 bg-white rounded-2xl border border-[#EAE5DB] shadow-sm hover:border-[#3D6C6A]/40 transition-all">
+                        <div className="flex items-center justify-between gap-2 mb-2">
+                          <div className="flex items-center gap-2">
+                            <span className="text-xl">⚡</span>
+                            <span className="text-[11px] font-bold text-[#B45309] uppercase tracking-wider">
+                              Digital &bull; {emfFacts[factIndex.emf].tag}
+                            </span>
                           </div>
-                        <p className="text-[#3A4A45]">Your home has {answers.devices} connected devices running regularly, creating a consistent digital environment.</p>
+                          <span className="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-[#B45309]/10 text-[#B45309]">
+                            {emfFacts[factIndex.emf].stat}
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-400 font-medium mb-2">
+                          Your habit: {answers.devices || '1-5'} active connected devices operating regularly.
+                        </p>
+                        <p className="text-sm text-[#1C2826] font-semibold leading-relaxed mb-2">
+                          {emfFacts[factIndex.emf].fact}
+                        </p>
+                        <div className="bg-[#F4F1EA] p-3 rounded-xl border border-[#EAE5DB] mb-3">
+                          <p className="text-xs text-[#826443] font-bold leading-relaxed">
+                            ✓ Uplifting Takeaway: {emfFacts[factIndex.emf].solution}
+                          </p>
+                        </div>
+                        <Link 
+                          href="/science" 
+                          onClick={closeQuiz} 
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#073348] hover:text-[#3D6C6A] transition-colors"
+                        >
+                          <span>Learn more on The Science page</span>
+                          <span>&rarr;</span>
+                        </Link>
                       </div>
 
-                      <div className="p-6 bg-[#3D6C6A]/10 rounded-2xl border border-[#3D6C6A]/20">
-                        <h4 className="font-bold text-[#1C2826] uppercase tracking-widest text-sm mb-2">Your Priorities</h4>
-                        <p className="text-[#3A4A45] font-medium">{answers.priorities.join(', ')}</p>
+                      {/* Priorities & Dynamic Rotation Button */}
+                      <div className="p-4 bg-[#3D6C6A]/10 rounded-2xl border border-[#3D6C6A]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div>
+                          <span className="text-[10px] font-black text-[#3D6C6A] uppercase tracking-widest block">Your Focus Areas</span>
+                          <p className="text-xs font-bold text-[#1C2826] mt-0.5">
+                            {answers.priorities.length > 0 ? answers.priorities.join(' • ') : 'Better hydration & Wellness'}
+                          </p>
+                        </div>
+                        <button 
+                          type="button" 
+                          onClick={nextFacts}
+                          className="self-start sm:self-auto text-xs font-bold text-[#3D6C6A] hover:text-[#1C2826] flex items-center gap-1.5 whitespace-nowrap bg-white px-3.5 py-2 rounded-full border border-[#3D6C6A]/30 shadow-sm transition-all hover:scale-105 cursor-pointer"
+                          title="Click to discover another scientific fact"
+                        >
+                          <span>Discover Another Fact</span>
+                          <span className="text-sm">↻</span>
+                        </button>
                       </div>
                     </div>
-                    
-                    <p className="text-center font-serif text-[#3D6C6A] text-xl italic pt-4">"Interesting what we discover when we look at everyday things differently."</p>
 
-                    <button onClick={closeQuiz} className="w-full bg-[#1C2826] text-white font-bold py-4 rounded-xl hover:bg-[#3D6C6A] transition-colors shadow-lg">
-                      Close Profile
-                    </button>
+                    <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                      <Link 
+                        href="/science" 
+                        onClick={closeQuiz} 
+                        className="flex-1 bg-[#073348] text-white font-bold py-3.5 px-4 rounded-xl hover:bg-[#3D6C6A] transition-colors text-center text-sm shadow-md"
+                      >
+                        Explore The Science Hub &rarr;
+                      </Link>
+                      <button 
+                        onClick={closeQuiz} 
+                        className="py-3.5 px-6 rounded-xl border border-[#EAE5DB] hover:bg-gray-50 text-[#1C2826] font-bold text-sm transition-colors"
+                      >
+                        Close
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
