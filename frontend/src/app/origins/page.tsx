@@ -19,8 +19,8 @@ export default function OriginsPage() {
             Origins of Now is a wellness brand<br className="hidden md:block"/> rooted in a simple idea: <br/>
             <span className="text-[#3D6C6A]">What surrounds you matters</span>
           </h1>
-          <p className="text-xl md:text-3xl font-medium text-gray-600 leading-relaxed max-w-4xl mx-auto">
-            We believe wellbeing is shaped not only by what we eat and drink, but by the water we use, the air we breathe, the spaces we inhabit and the choices we make every day.
+          <p className="font-serif italic text-2xl md:text-3xl lg:text-4xl text-[#2B4C49] font-normal leading-relaxed max-w-4xl mx-auto tracking-wide">
+            "We believe wellbeing is shaped not only by what we eat and drink, but by everything we surround ourselves with, the water we use, the air we breathe, the spaces we inhabit, the people we connect with, and the choices we make every day."
           </p>
         </motion.div>
       </section>

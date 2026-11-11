@@ -432,77 +432,98 @@ export default function KangenWaterPage() {
             </div>
           </div>
 
-          {/* Clean Detail View / Modal for Selected Water Type — Clean White, No Heavy Background, Close Button */}
+          {/* Clean Structured Detail View / Modal for Selected Water Type — Eliminates Empty Floating Space */}
           <AnimatePresence>
             {selectedWater && (
               <div 
                 onClick={() => setSelectedWater(null)}
-                className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
+                className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
               >
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.95, y: 15 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 15 }}
                   onClick={(e) => e.stopPropagation()}
-                  className="relative w-full max-w-2xl bg-white border border-[#EAE5DB] rounded-3xl p-6 md:p-10 shadow-2xl text-[#073348] max-h-[85vh] overflow-y-auto"
+                  className="relative w-full max-w-3xl bg-white border border-[#EAE5DB] rounded-[2.5rem] shadow-2xl text-[#073348] max-h-[90vh] overflow-hidden flex flex-col"
                 >
-                  <div className="flex items-start justify-between gap-4 mb-4">
-                    <div>
-                      <span className={`inline-block px-3.5 py-1 rounded-full text-xs font-black tracking-wider uppercase border mb-2 ${selectedWater.badgeStyle}`}>
-                        {selectedWater.ph} &middot; {selectedWater.name}
-                      </span>
-                      <p className="text-xs font-black uppercase tracking-widest text-gray-400">
-                        {selectedWater.modalSubtitle}
-                      </p>
-                    </div>
+                  {/* Modal Header with subtle themed card tint */}
+                  <div className={`p-6 md:p-8 ${selectedWater.bgCard} border-b ${selectedWater.borderCard} relative`}>
                     <button 
                       onClick={() => setSelectedWater(null)}
-                      className="text-gray-400 hover:text-[#073348] text-2xl font-light w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                      className="absolute top-6 right-6 text-gray-400 hover:text-[#073348] text-2xl font-light w-9 h-9 rounded-full flex items-center justify-center bg-white/80 hover:bg-white shadow-sm transition-all cursor-pointer"
                       aria-label="Close"
                     >
                       &times;
                     </button>
+                    
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <span className={`inline-block px-3.5 py-1 rounded-full text-xs font-black tracking-wider uppercase border shadow-sm ${selectedWater.badgeStyle}`}>
+                        {selectedWater.ph} &middot; {selectedWater.name}
+                      </span>
+                      <span className="text-[11px] font-black uppercase tracking-widest text-gray-500">
+                        {selectedWater.modalSubtitle}
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl md:text-3xl font-black text-[#073348] leading-tight mb-2">
+                      {selectedWater.modalHeadline}
+                    </h3>
+
+                    {selectedWater.modalIntro && (
+                      <p className="text-sm md:text-base text-gray-600 font-medium leading-relaxed">
+                        {selectedWater.modalIntro}
+                      </p>
+                    )}
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-black mb-2 text-[#073348] leading-tight">
-                    {selectedWater.modalHeadline}
-                  </h3>
+                  {/* Modal Body with structured 2-column cards */}
+                  <div className="p-6 md:p-8 overflow-y-auto space-y-6 flex-1">
+                    <div>
+                      <span className="text-[11px] font-black uppercase tracking-widest text-[#3D6C6A] block mb-3">
+                        Key Applications &amp; Recommended Uses
+                      </span>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                        {selectedWater.points.map((pt, i) => (
+                          <div 
+                            key={i} 
+                            className="bg-[#F9F7F3] border border-[#EAE5DB] rounded-2xl p-4 md:p-5 hover:border-[#3D6C6A]/40 transition-all flex flex-col justify-start shadow-xs"
+                          >
+                            <div className="flex items-center gap-2 mb-1.5">
+                              <span className="text-[10px] font-black px-2 py-0.5 rounded-full bg-white border border-[#EAE5DB] text-[#3D6C6A]">
+                                0{i + 1}
+                              </span>
+                              <h5 className="text-sm font-bold text-[#073348] leading-snug">
+                                {pt.title}
+                              </h5>
+                            </div>
+                            <p className="text-xs text-gray-600 leading-relaxed font-medium mt-1">
+                              {pt.text}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
-                  {selectedWater.modalIntro && (
-                    <p className="text-sm md:text-base text-gray-600 font-medium mb-6 leading-relaxed">
-                      {selectedWater.modalIntro}
-                    </p>
-                  )}
-
-                  {/* Clean Content Points — No nested colored background box */}
-                  <div className="space-y-4 my-6 text-sm md:text-base">
-                    {selectedWater.points.map((pt, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#073348] mt-2 flex-shrink-0"></span>
-                        <p className="text-[#2C3E3A] leading-relaxed">
-                          <strong className="text-[#073348] font-bold">{pt.title}: </strong>
-                          <span className="font-medium text-gray-700">{pt.text}</span>
+                    {/* The OON Takeaway Card */}
+                    <div className="p-5 rounded-2xl bg-[#F4F1EA] border border-[#C9B79E]/60 flex items-start gap-4 shadow-xs">
+                      <span className="text-2xl flex-shrink-0">✨</span>
+                      <div>
+                        <span className="text-[10px] font-black uppercase tracking-widest text-[#826443] block mb-1">
+                          THE OON TAKEAWAY
+                        </span>
+                        <p className="font-serif italic text-base md:text-lg text-[#073348] font-medium leading-snug">
+                          "{selectedWater.takeaway}"
                         </p>
                       </div>
-                    ))}
+                    </div>
                   </div>
 
-                  {/* The OON Takeaway */}
-                  <div className="pt-5 border-t border-gray-100 mb-6">
-                    <span className="text-[11px] font-black uppercase tracking-widest text-[#826443] block mb-1">
-                      THE OON TAKEAWAY
-                    </span>
-                    <p className="font-serif italic text-base md:text-lg text-[#073348] font-medium">
-                      "{selectedWater.takeaway}"
-                    </p>
-                  </div>
-
-                  {/* Bottom Action — Changed to 'Close' */}
-                  <div className="pt-4 border-t border-gray-100 flex justify-between items-center">
+                  {/* Modal Footer */}
+                  <div className="p-4 md:px-8 md:py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
                     <span className="text-xs text-gray-400 italic">Origins of Now Standards</span>
                     <button 
                       onClick={() => setSelectedWater(null)}
-                      className={`${selectedWater.btnAccent} font-bold px-8 py-2.5 rounded-full text-sm transition-all shadow-md`}
+                      className={`${selectedWater.btnAccent} font-bold px-8 py-2.5 rounded-full text-sm transition-all shadow-md cursor-pointer hover:scale-105`}
                     >
                       Close
                     </button>
