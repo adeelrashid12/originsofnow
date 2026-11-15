@@ -76,6 +76,25 @@ interface PhWaterType {
 export default function KangenWaterPage() {
   const [selectedWater, setSelectedWater] = useState<PhWaterType | null>(null);
 
+  useEffect(() => {
+    if (selectedWater) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedWater]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedWater(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   // Exact content from "ph page content.docx"
   const waterTypes: PhWaterType[] = [
     {
@@ -259,7 +278,8 @@ export default function KangenWaterPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#073348] text-[#EAE5DB] font-sans selection:bg-[#3E6C6A]/30 pt-32 pb-24">
+    <>
+      <main className="min-h-screen bg-[#073348] text-[#EAE5DB] font-sans selection:bg-[#3E6C6A]/30 pt-32 pb-24">
       <div className="max-w-6xl mx-auto px-6">
         <Link href="/explore" className="inline-flex items-center text-[#C9B79E] font-bold mb-12 hover:text-white transition-colors">
           &larr; Back to Explore
@@ -432,12 +452,17 @@ export default function KangenWaterPage() {
             </div>
           </div>
 
-          {/* Clean Structured Detail View / Modal for Selected Water Type — Eliminates Empty Floating Space */}
+        </div>
+      </div>
+    </main>
+
+    {/* Clean Structured Detail View / Modal — Fully Fixed to Viewport, Outside backdrop-blur-sm */}
+    {/* Clean Structured Detail View / Modal for Selected Water Type — Eliminates Empty Floating Space */}
           <AnimatePresence>
             {selectedWater && (
               <div 
                 onClick={() => setSelectedWater(null)}
-                className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
+                className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-hidden"
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95, y: 15 }}
@@ -532,9 +557,6 @@ export default function KangenWaterPage() {
               </div>
             )}
           </AnimatePresence>
-
-        </div>
-      </div>
-    </main>
+    </>
   );
 }
