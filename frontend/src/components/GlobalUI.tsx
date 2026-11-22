@@ -525,9 +525,9 @@ export default function GlobalUI() {
                 <h4 className="text-xl font-black mb-1 relative z-10">OON Concierge</h4>
                 <p className="text-sm text-[#3D6C6A] font-medium relative z-10">Elevate your living.</p>
               </div>
-              <div className="p-6 space-y-5">
-                <p className="text-gray-600 text-sm leading-relaxed text-center font-medium">
-                  Have questions about intelligent hydration or space harmonization? Connect directly with our specialists.
+              <div className="p-6 space-y-4">
+                <p className="text-gray-600 text-sm text-center font-medium">
+                  Connect with us
                 </p>
                 <a 
                   href="https://wa.me/971504585668" 
